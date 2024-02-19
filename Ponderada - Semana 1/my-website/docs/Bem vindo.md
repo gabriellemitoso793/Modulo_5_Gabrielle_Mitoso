@@ -15,56 +15,9 @@ Tudo aqui foi sendo construído durante os **20 anos da minha existência**.
 
 - Embora pareça bobo, é sempre bom lembrar:
   - Ninguém é igual.
-  - Dediquei todos os meus esforços em ser uma boa aluna.
   - A vida não é fácil e nem deveria ser, assim a gente se esforça mais!!!!
 
-## Linha do Tempo (2003 - 2024)
 
-#### 2003 - Início da Jornada
-
-- Sem muitos detalhes, apenas nasci.
-
-#### 2006 - Me tornando acadêmica
-
-- Eu só poderia mexer no computador quando aprendesse a ler, magicamente (não lembro como), aprendi e meus pais foram obrigados a me deixar mexer.
-
-#### 2010 - Descobrindo paixões
-
-- Comecei a fazer teatro
-
-#### 2015 - Explorando Interesses Acadêmicos
-
-- Comecei a participar de olimpíadas científicas, ganhei a minha primeira medalha e comecei a estudar para isso.
-
-#### 2016 - Explorando Interesses Acadêmicos
-
-- Seleção de cursos relacionados a ciências e tecnologia.
-
-#### 2018 - Entrada na Universidade
-
-- Admissão em [Nome da Universidade] para [Curso].
-
-#### 2020 - Desafios e Conquistas
-
-- Participação em projetos acadêmicos importantes.
-
-#### 2022 - Conclusão do Curso
-
-- Graduação em [Engenharia da Computação].
-
-### 2023 - Início da Carreira Profissional
-
-- Primeiro emprego na área de [Área de Atuação].
-
-### 2024 - Presente
-
-- Continuação do desenvolvimento profissional.
-- Explorando novas oportunidades.
-
-
-## Start your site
-
-Run the development server:
 
 ```bash
 cd my-website
