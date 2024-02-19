@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: .\Documents\GitHub\M5_GABRIELLE_MITOSO\Modulo_5_Gabrielle_Mitoso\Ponderada - Semana 1\my-website
+        working-directory: .\my-website
     steps:
       - uses: actions/checkout@v4
         with:
