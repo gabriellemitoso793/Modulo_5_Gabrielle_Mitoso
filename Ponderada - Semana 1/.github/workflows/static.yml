@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Semana 1/PersonalPage/paginaPessoal
+        working-directory: .\Documents\GitHub\M5_GABRIELLE_MITOSO\Modulo_5_Gabrielle_Mitoso\Ponderada - Semana 1\my-website
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./Semana 1/PersonalPage/paginaPessoal/build
+          path: ./my-website/build
 
   deploy:
     name: Deploy to GitHub Pages
