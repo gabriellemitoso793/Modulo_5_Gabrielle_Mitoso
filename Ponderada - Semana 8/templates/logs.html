@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs do Sistema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logs do Sistema</h1>
+    <a href="/" class="btn">Voltar para a página de controle</a>
+    <ul>
+    {% for log in logs %}
+        <li>{{ log.command }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

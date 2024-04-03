@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle do Robô</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px; 
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+
+        form {
+            margin-bottom: 20px; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button, .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none; 
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn {
+            margin-right: 10px; 
+        }
+
+        .message {
+            color:pink; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle do Robô</h1>
+    <form id="homeForm" method="POST" action="/">
+        <input type="hidden" name="command" value="home">
+        <button type="submit" class="btn">Ir para Home</button>
+    </form>
+    <form method="POST" hx-post="/control">
+        <label for="x">X:</label>
+        <input type="number" name="x" step="any" required>
+        <label for="y">Y:</label>
+        <input type="number" name="y" step="any" required>
+        <label for="z">Z:</label>
+        <input type="number" name="z" step="any" required>
+        <button type="submit" class="btn">Enviar Comando</button>
+    </form>
+    <a href="/logs" class="btn">Ver Logs</a>
+    {% if message %}
+    <p class="message">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
