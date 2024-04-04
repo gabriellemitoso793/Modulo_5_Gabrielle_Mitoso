@@ -33,20 +33,59 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            margin: 10px;
         }
 
         .btn:hover {
             background-color: #0056b3;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
-    <h1>Logs do Sistema</h1>
-    <a href="/" class="btn">Voltar para a página de controle</a>
-    <ul>
-    {% for log in logs %}
-        <li>{{ log.command }}</li>
-    {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>Logs do Sistema</h1>
+        <a href="/" class="btn">Voltar para a página de controle</a>
+        <form action="/logs" method="post">
+            <button type="submit" class="btn" name="delete_db">Apagar o banco de dados</button>
+        </form>
+        <form action="/logs" method="post">
+            <label for="log-select">Selecione o log a ser atualizado:</label>
+            <select id="log-select" name="log">
+                {% for log in logs %}
+                    <option value="{{ log.doc_id }}">{{ log.command }}</option>
+                {% endfor %}
+            </select>
+            <label for="new-command">Novo Comando:</label>
+            <input type="text" id="new-command" name="new_command" required>
+            <button type="submit" class="btn" name="update_log">Atualizar Log</button>
+        </form>
+        <ul>
+            {% for log in logs %}
+                <li>{{ log.command }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
